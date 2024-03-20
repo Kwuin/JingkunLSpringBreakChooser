@@ -35,6 +35,14 @@ private lateinit var shakeDetector: ShakeDetector
 
 private const val TAG: String = "MainActivity"
 
+//citation:
+//https://chat.openai.com/share/eec8e66c-5baf-4fb6-a162-1b0ba20e1f8d
+//https://chat.openai.com/share/1245aaa5-1d60-407c-99cc-667a127ac5cd
+//https://stackoverflow.com/questions/5924190/how-do-you-enable-a-microphone-input-in-the-android-emulator
+//https://stackoverflow.com/questions/47695367/speechrecognizer-gives-no-match-immediately-after-the-start
+//https://developer.android.com/reference/android/speech/SpeechRecognizer
+
+
 class MainActivity : AppCompatActivity() {
     private lateinit var operationSpinner: Spinner
 
