@@ -85,12 +85,22 @@ class MainActivity : AppCompatActivity() {
         setupListener()
 
         recordButton.setOnClickListener {
-            if (!record) {
-                record()
-                record = true
-            } else {
-                speechRecognizer.stopListening()
-                record = false
+            if (selectedLanguageCode == null){
+                Toast.makeText(
+                    this@MainActivity,
+                    "You haven't chosen any languages",
+                    Toast.LENGTH_SHORT
+                ).show()
+            }else {
+                if (!record) {
+                    record()
+                    record = true
+                    recordButton.text = "Stop"
+                } else {
+                    speechRecognizer.stopListening()
+                    record = false
+                    recordButton.text = "Record"
+                }
             }
         }
 
